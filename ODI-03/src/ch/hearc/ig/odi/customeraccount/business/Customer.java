@@ -69,12 +69,13 @@ public class Customer {
      * Retourne le compte possédant le numéro passé en paramètre.
      *
      * @param number Le numéro du compte désiré.
+     * @return Le compte recherché ou null s'il n'existe pas.
      */
     public Account getAccountByNumber(final String number) {
         Account account = null;
         
         for (Account acc : this.accounts) {
-            if (number.equals(account.getNumber())) {
+            if (acc.getNumber().equals(number)) {
                 account = acc;
                 break;
             }
