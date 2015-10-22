@@ -1,7 +1,8 @@
 package ch.hearc.ig.odi.customeraccount.business;
 
 /**
- *
+ * Classe permettant la gestion de comptes.
+ * 
  * @author Loïc Megert <loic.megert@he-arc.ch>
  */
 public class Account {
@@ -62,11 +63,12 @@ public class Account {
     }
 
     /**
+     * Constructeur paramétré pour les comptes.
      *
-     * @param number
-     * @param name
-     * @param rate
-     * @param customer
+     * @param number Le numéro du compte.
+     * @param name Le nom du compte.
+     * @param rate Le taux d'intérêt du compte.
+     * @param customer Le propriétaire du compte.
      */
     public Account(final String number, final String name, final double rate, final Customer customer) {
         this.number = number;
@@ -76,8 +78,9 @@ public class Account {
     }
 
     /**
+     * Crédite le montant désiré sur le compte.
      *
-     * @param amount
+     * @param amount Le montant à créditer.
      */
     public void credit(final double amount) {
         if (amount <= 0) {
@@ -87,8 +90,9 @@ public class Account {
     }
 
     /**
+     * Débite le montant désiré sur le compte.
      *
-     * @param amount
+     * @param amount Le montant à débiter.
      */
     public void debit(final double amount) {
         if (amount <= 0) {
@@ -101,10 +105,11 @@ public class Account {
     }
 
     /**
+     * Transfère le montant désiré du compte source au compte cible.
      *
-     * @param amount
-     * @param source
-     * @param target
+     * @param amount Le montant à transférer.
+     * @param source Le compte source.
+     * @param target Le compte cible.
      */
     public static void transfer(final double amount, final Account source, final Account target) {
         source.debit(amount);
