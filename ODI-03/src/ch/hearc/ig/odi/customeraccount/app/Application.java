@@ -50,6 +50,11 @@ public class Application {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            
+            System.out.println();
+            System.out.println("Test de la classe Bank");
+            System.out.println();
+            
         } catch (Exception ex) {
             ex.printStackTrace();
         }
