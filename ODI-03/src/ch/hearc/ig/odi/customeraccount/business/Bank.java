@@ -104,4 +104,20 @@ public class Bank {
         accounts.add(new Account(number, name, rate, customer));
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.number);
+        sb.append(";");
+        sb.append(this.name);
+        for(Customer cust : customers) {
+            sb.append(";");
+            sb.append(cust.toString());
+        }
+        for(Account acc : accounts) {
+            sb.append(";");
+            sb.append(acc.toString());
+        }
+        return sb.toString();
+    }
 }
