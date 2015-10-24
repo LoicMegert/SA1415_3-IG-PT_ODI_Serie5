@@ -84,7 +84,7 @@ public class Account {
      */
     public void credit(final double amount) {
         if (amount <= 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Impossible de créditer un montant négatif ou null !");
         }
         this.balance += amount;
     }
@@ -96,10 +96,10 @@ public class Account {
      */
     public void debit(final double amount) {
         if (amount <= 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Impossible de débiter un montant négatif ou null !");
         }
         if (this.balance < amount) {
-            throw new IllegalStateException();
+            throw new IllegalStateException("Solde insuffisant ! Débit refusé.");
         }
         this.balance -= amount;
     }
