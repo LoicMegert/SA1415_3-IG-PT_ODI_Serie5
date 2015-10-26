@@ -3,7 +3,6 @@ package ch.hearc.ig.odi.customeraccount.app;
 import ch.hearc.ig.odi.customeraccount.business.Account;
 import ch.hearc.ig.odi.customeraccount.business.Bank;
 import ch.hearc.ig.odi.customeraccount.business.Customer;
-import java.util.Arrays;
 
 /**
  *
